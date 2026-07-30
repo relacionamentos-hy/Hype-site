@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hype | Internet fibra em Brasília e Entorno</title>
+<meta name="description" content="Internet fibra óptica 100% para Brasília e Entorno. Consulte a cobertura na sua região, compare planos a partir de R$99,99/mês e contrate online ou pelo WhatsApp.">
+<meta name="theme-color" content="#f7f8fc">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hype | Internet fibra em Brasília e Entorno">
+<meta property="og:description" content="Consulte a cobertura, compare planos e contrate fibra óptica Hype na sua região.">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%233654e0'/%3E%3Cstop offset='100%25' stop-color='%238a2be2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='24' height='24' rx='6' fill='%23f7f8fc'/%3E%3Crect x='4' y='13' width='3' height='7' rx='1.5' fill='url(%23g)'/%3E%3Crect x='9' y='9' width='3' height='11' rx='1.5' fill='url(%23g)'/%3E%3Crect x='14' y='5' width='3' height='15' rx='1.5' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f8fc;
+  --panel:#ffffff;
+  --panel-2:#eef0f9;
+  --line:rgba(20,22,50,0.10);
+  --blue:#3654e0;
+  --blue-2:#2540c9;
+  --violet:#8a2be2;
+  --violet-2:#a13ef0;
+  --ink:#14162e;
+  --dim:#565a80;
+  --dim-2:#82859f;
+  --good:#1a9a63;
+  --warn:#b9750f;
+  --onbrand:#ffffff;
+  --grad: linear-gradient(180deg, var(--blue) 0%, var(--violet) 100%);
+  --grad-diag: linear-gradient(115deg, var(--blue) 0%, var(--violet) 60%, var(--violet-2) 100%);
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family: 'Inter', sans-serif;
+  overflow-x:hidden;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,.display{font-family: 'Space Grotesk', sans-serif;}
+a{color:inherit; text-decoration:none;}
+.wrap{max-width: 1180px; margin:0 auto; padding:0 32px;}
+
+/* subtle grid texture */
+.bg-grid{
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:
+  radial-gradient(circle at 15% 10%, rgba(138,43,226,0.08), transparent 40%),
+  radial-gradient(circle at 85% 0%, rgba(54,84,224,0.07), transparent 45%);
+}
+
+/* ===== NAV ===== */
+header.nav{
+  position:sticky; top:0; z-index:50;
+  background:rgba(247,248,252,0.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1180px; margin:0 auto; padding:18px 32px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.logo{display:flex; align-items:center; gap:10px; font-weight:700; font-size:22px; letter-spacing:-0.02em;}
+.logo-bars{display: flex; align-items:flex-end; gap:3px; height:22px;}
+.logo-bars span{width:5px; border-radius:3px; background:var(--grad);}
+.logo-bars span:nth-child(1) {height:35%; background: var(--blue);}
+.logo-bars span:nth-child(2){height:60%; background: var(--blue-2);}
+.logo-bars span:nth-child(3) {height:85%; background:var(--violet);}
+.logo-bars span:nth-child(4){height:100%; background:var(--violet-2);}
+.logo-bars .dot{width:5px; height:5px; border-radius:50%; background:var(--violet-2); margin-bottom:2px;}
+nav.links{display:flex; gap:34px; font-size:14.5px; color:var(--dim); font-weight:500;}
+nav.links a:hover{color:var(--ink);}
+.nav-cta{
+  background:var(--ink); color:var(--bg); font-weight:700; font-size:14px;
+  padding:10px 20px; border-radius:100px; transition:transform .15s ease, opacity .15s ease;
+}
+.nav-cta:hover{transform:translateY(-1px); opacity:.85;}
+.nav-toggle{
+  display:none; background:none; border:none; cursor:pointer;
+  width:36px; height: 36px; padding:0; flex-direction:column; justify-content:center; align-items:center; gap:5px;
+}
+.nav-toggle span{width:22px; height:2px; background: var(--ink); border-radius: 2px; transition:transform .2s ease, opacity .2s ease;}
+.nav-toggle.open span:nth-child(1) {transform: translateY(7px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3) {transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{
+  display:none; flex-direction:column; padding:8px 32px 20px; gap:2px;
+  border-top:1px solid var(--line); background:rgba(247,248,252,0.98);
+}
+.mobile-menu.open{display: flex;}
+.mobile-menu a{padding:13px 0; font-size:15px; color:var(--dim); border-bottom:1px solid var(--line);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a:hover{color:var(--ink);}
+
+/* ===== HERO / COVERAGE CHECK ===== */
+.hero{
+  position:relative; z-index:1;
+  padding:88px 0 100px;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:12.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--violet-2); margin-bottom:22px;
+}
+.eyebrow::before{content:''; width:6px; height:6px; border-radius:50%; background:var(--good); box-shadow:0 0 4px rgba(26,154,99,0.2);}
+.hero-top{display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;}
+.hero h1{
+  font-size:clamp(38px, 5.2vw, 68px);
+  line-height:1.04; letter-spacing:-0.02em; font-weight:700;
+  max-width:760px;
+}
+.hero h1 .grad-text{
+  background:var(--grad-diag); -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero p.sub{
+  margin-top:22px; font-size:17.5px; color:var(--dim); max-width:520px; line-height:1.6;
+}
+.hero-banner{width:100%; height:auto; display:block;}
+.check-panel{
+  margin-top:44px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:28px;
+  max-width:620px;
+  box-shadow:0 24px 48px -20px rgba(20,22,50,0.16);
+}
+.check-label{font-size:13px; font-weight:600; color:var(--dim); margin-bottom: 12px; display:block;}
+.search-row{position:relative; display: flex; gap:10px;}
+.search-row input{
+  flex:1; background:var(--bg); border:1px solid var(--line); border-radius:12px;
+  padding:16px 18px; color:var(--ink); font-size:16px; font-family:inherit;
+  outline:none; transition:border-color .15s ease;
+}
+.search-row input::placeholder{color:var(--dim-2);}
+.search-row input:focus{border-color:var(--violet);}
+.search-row button{
+  background:var(--grad); color:var(--onbrand); font-weight:700; font-size:15px;
+  border:none; border-radius:12px; padding:0 26px; cursor:pointer;
+  transition:filter .15s ease, transform .15s ease;
+  white-space:nowrap;
+}
+.search-row button:hover{filter:brightness(1.08); transform:translateY(-1px);}
+.suggestions{
+  position:absolute; top:calc(100% + 8px); left:0; right:0;
+  background:var(--panel); border:1px solid var(--line); border-radius:14px;
+  max-height:280px; overflow-y:auto; z-index:20;
+  box-shadow:0 20px 40px -12px rgba(20,22,50,0.22);
+  display:none;
+}
+.suggestions.open{display:block;}
+.suggestions .group-label{
+  font-size:11px; font-weight:700; letter-spacing: .06em; text-transform:uppercase;
+  color:var(--dim-2); padding:12px 16px 6px;
+}
+.suggestion-item{
+  padding:11px 16px; font-size:14.5px; cursor:pointer;
+  display: flex; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--line);
+}
+.suggestion-item:hover{background:var(--panel-2);}
+.suggestion-item .tag{
+  font-size:11px; padding:3px 8px; border-radius:100px; font-weight:600;
+}
+.tag.covered{background:rgba(26,154,99,0.12); color:var(--good);}
+.tag.pending{background:rgba(185,117,15,0.12); color:var(--warn);}
+.result-card{
+  margin-top:18px; border-radius:16px; padding:22px;
+  display:none; align-items:center; gap:18px;
+  border:1px solid var(--line);
+}
+.result-card.show{display:flex;}
+.result-card.covered{background:linear-gradient(120deg, rgba(26,154,99,0.09), rgba(26,154,99,0.02));}
+.result-card.pending{background: linear-gradient(120deg, rgba(185,117,15,0.09), rgba(185,117,15,0.02));}
+.result-bars{display:flex; align-items:flex-end; gap:4px; height:40px; flex-shrink:0;}
+.result-bars span{width:7px; border-radius:4px; background:var(--dim-2); transition:height .4s ease, background .4s ease;}
+.result-text b{display:block; font-size:16.5px; margin-bottom:3px;}
+.result-text span{font-size: 13.5px; color:var(--dim); line-height:1.5;}
+.result-cta{
+  margin-left:auto; flex-shrink:0;
+  background:var(--ink); color:var(--bg); font-weight:700; font-size:13.5px;
+  padding:10px 18px; border-radius:100px; white-space:nowrap;
+}
+.result-cta.ghost{background:transparent; border:1px solid var(--line); color:var(--ink);}
+.hero-strip{
+  margin-top:30px; display: flex; gap:28px; flex-wrap:wrap; color:var(--dim-2); font-size:13px;
+}
+.hero-strip b{color:var(--ink); font-weight:700;}
+
+/* ===== SECTION HEADERS ===== */
+.section{position:relative; z-index:1; padding:96px 0; border-bottom:1px solid var(--line);}
+.section-head{max-width:560px; margin-bottom:56px;}
+.section-head.split{display: flex; justify-content:space-between; align-items:flex-end; gap:40px; max-width:none;}
+.section-head.split .head-text{max-width: 560px;}
+.section-head .eyebrow{color:var(--blue-2);}
+.section-head h2{font-size:clamp(28px,3.4vw, 40px); font-weight:700; letter-spacing:-0.02em; line-height:1.12;}
+.section-head p{margin-top:14px; color:var(--dim); font-size:16px; line-height:1.6;}
+.section-banner{width:220px; height:auto; flex-shrink:0;}
+
+/* ===== PLANS ===== */
+.plans-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+.plan-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:20px;
+  padding:30px 26px; position:relative; overflow:hidden;
+  display: flex; flex-direction:column;
+  box-shadow:0 1px 2px rgba(20,22,50,0.04);
+  transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.plan-card:hover{transform:translateY(-4px); border-color:rgba(138,43,226,0.35); box-shadow:0 20px 36px -18px rgba(20,22,50,0.2);}
+.plan-card.featured{border-color:var(--violet); background:linear-gradient(160deg, var(--panel-2), var(--panel));}
+.plan-badge{
+  position:absolute; top:24px; right:24px; font-size:11px; font-weight:700;
+  background:var(--grad); color:var(--onbrand); padding:5px 12px; border-radius:100px; letter-spacing:.03em;
+}
+.plan-signal{display:flex; align-items:flex-end; gap:5px; height:34px; margin-bottom:22px;}
+.plan-signal span{width:8px; border-radius:4px;}
+.plan-name{font-size:14px; font-weight:600; color:var(--dim); text-transform:uppercase; letter-spacing: .05em; margin-bottom:8px;}
+.plan-speed{font-family: 'Space Grotesk', sans-serif; font-size:38px; font-weight:700; letter-spacing:-0.02em; margin-bottom:4px;}
+.plan-speed span{font-size:18px; color:var(--dim); font-weight:500;}
+.plan-price{color:var(--dim); font-size:14px; margin-bottom:24px;}
+.plan-price b{color:var(--ink); font-size:22px; font-family: 'Space Grotesk', sans-serif;}
+.plan-features{list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:28px; flex:1;}
+.plan-features li{font-size:14px; color:var(--dim); display:flex; gap:10px; align-items:flex-start; line-height:1.4;}
+.plan-features li::before{content:'✓'; color:var(--good); font-weight:700; flex-shrink:0;}
+.plan-btn{
+  text-align:center; padding:14px; border-radius: 12px; font-weight:700; font-size:14.5px;
+  background:var(--panel-2); border:1px solid var(--line); color:var(--ink);
+}
+.plan-card.featured .plan-btn{background:var(--grad); border:none; color:var(--onbrand);}
+.plan-btn:hover{filter:brightness(0.98);}
+.plan-card.featured .plan-btn:hover{filter:brightness(1.08);}
+.plan-group{margin-bottom:56px;}
+.plan-group:last-child{margin-bottom:0;}
+.plan-group-title{
+  font-size:19px; font-weight:700; margin-bottom:22px;
+  display: flex; align-items:center; gap:10px;
+}
+.plan-group-title::before{content:''; width:8px; height:8px; border-radius:50%; background:var(--grad); flex-shrink:0;}
+.payment-tag{
+  font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.05em;
+  color:var(--violet-2); margin-bottom:14px;
+}
+.plan-fine{font-size:12.5px; color:var(--dim-2); margin-top:-16px; margin-bottom:24px;}
+.plan-actions{display:flex; flex-direction:column; gap:10px; margin-top:auto;}
+.plan-btn-secondary{
+  text-align:center; padding:13px; border-radius:12px; font-weight:600; font-size:14px;
+  border:1px solid var(--line); color:var(--ink); transition:background .15s ease;
+}
+.plan-btn-secondary:hover{background:var(--panel-2);}
+.plan-link-ghost{
+  text-align:center; font-size:13px; color:var(--dim); text-decoration:underline; padding:4px;
+}
+.plan-link-ghost:hover{color:var(--ink);}
+
+/* ===== WHY ===== */
+.why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+.why-card{padding:26px 4px; border-top:1px solid var(--line);}
+.why-num{font-family: 'Space Grotesk', sans-serif; font-size:13px; color:var(--dim-2); margin-bottom:16px; font-weight:600;}
+.why-card h3{font-size:17px; margin-bottom:10px; font-weight:600;}
+.why-card p{font-size:14px; color:var(--dim); line-height:1.6;}
+
+/* ===== COVERAGE MAP LIST ===== */
+.coverage-cols{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+.cov-block h3{font-size:15px; font-weight:700; margin-bottom:16px; display:flex; align-items:center; gap:8px; color:var(--ink);}
+.cov-dot{width:8px; height:8px; border-radius:50%;}
+.cov-dot.covered{background:var(--good);}
+.cov-dot.pending{background:var(--warn);}
+.cov-chips{display:flex; flex-wrap:wrap; gap:8px;}
+.cov-chip{
+  font-size:13px; padding:7px 13px; border-radius:100px; border:1px solid var(--line);
+  color:var(--dim); background:var(--panel);
+}
+.cov-chip.covered{color:var(--ink); font-weight:600;}
+.coverage-note{
+  margin-top:22px; font-size:13.5px; color:var(--dim-2); line-height:1.6;
+  border-top:1px solid var(--line); padding-top:18px;
+}
+
+/* ===== CTA / FOOTER ===== */
+.cta-section{
+  position:relative; z-index:1; padding:100px 0; text-align:center;
+  background:radial-gradient(ellipse at 50% 0%, rgba(138,43,226,0.08), transparent 60%);
+}
+.cta-banner{width:180px; height:auto; margin:0 auto 28px;}
+.cta-section h2{font-size:clamp(30px, 4vw, 48px); font-weight:700; letter-spacing:-0.02em; max-width:640px; margin:0 auto 18px; color:var(--ink);}
+.cta-section p{color:var(--dim); font-size:16px; margin-bottom:32px;}
+.cta-btn{
+  display:inline-block; background:var(--grad); color:var(--onbrand); font-weight:700; font-size:15.5px;
+  padding:16px 34px; border-radius:100px;
+}
+.cta-btn:hover{filter:brightness(1.08);}
+footer{position:relative; z-index:1; padding:50px 0 40px; border-top:1px solid var(--line);}
+.footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;}
+.footer-links{display:flex; gap:26px; font-size:13.5px; color:var(--dim);}
+.footer-links a:hover{color:var(--ink);}
+.footer-copy{font-size:13px; color:var(--dim-2);}
+
+/* ===== CADASTRO ===== */
+.signup-box{
+  background:var(--panel); border:1px solid var(--line); border-radius:20px;
+  padding:36px; max-width:640px; box-shadow:0 10px 30px -10px rgba(20,22,50,0.08);
+}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;}
+.form-field{display:flex; flex-direction:column; gap:6px;}
+.form-field.full{grid-column:1/-1;}
+.form-field label{font-size:13px; font-weight:600; color:var(--dim);}
+.form-field input, .form-field select{
+  background:var(--bg); border:1px solid var(--line); border-radius:12px;
+  padding:13px 14px; color:var(--ink); font-size:15px; font-family:inherit; outline:none;
+  transition:border-color .15s ease;
+}
+.form-field input:focus, .form-field select:focus{border-color:var(--violet);}
+.form-field input:invalid:not(:placeholder-shown){border-color:var(--warn);}
+.form-note{font-size:12.5px; color:var(--dim-2); margin-top:4px; line-height:1.5;}
+.signup-submit{
+  width:100%; margin-top:8px; background:var(--grad); color:var(--onbrand); font-weight:700; font-size:15px;
+  border:none; border-radius:12px; padding:15px; cursor:pointer; transition:filter .15s ease, transform .15s ease;
+}
+.signup-submit:hover{filter:brightness(1.08); transform:translateY(-1px);}
+.signup-submit:disabled{opacity:.6; cursor:not-allowed; transform:none;}
+.form-feedback{margin-top:14px; font-size:14px; padding:12px 14px; border-radius:100px; display:none;}
+.form-feedback.show{display:block;}
+.form-feedback.ok{background:rgba(26,154,99,0.12); color:var(--good);}
+.form-feedback.err{background:rgba(185,117,15,0.12); color:var(--warn);}
+.form-privacy{font-size:12px; color:var(--dim-2); margin-top:16px; line-height:1.6;}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:760px; display:flex; flex-direction:column; gap:10px;}
+.faq-item{border:1px solid var(--line); border-radius:14px; background:var(--panel); overflow:hidden;}
+.faq-q{
+  width:100%; text-align:left; background:none; border:none; cursor:pointer;
+  padding:19px 22px; font-size:15.5px; font-weight:600; color:var(--ink);
+  display:flex; justify-content:space-between; align-items:center; gap:16px; font-family:inherit;
+}
+.faq-q svg{width:18px; height:18px; flex-shrink:0; color:var(--dim); transition:transform .2s ease;}
+.faq-item.open .faq-q svg{transform:rotate(45deg); color:var(--violet-2);}
+.faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
+.faq-a p{padding:0 22px 20px; font-size:14.5px; color:var(--dim); line-height:1.6;}
+
+/* ===== WHATSAPP FLOAT ===== */
+.wa-float{
+  position:fixed; bottom:24px; right:24px; z-index:60;
+  width:58px; height:58px; border-radius:50%; background:#25D366;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 30px -8px rgba(0,0,0,0.3); transition:transform .15s ease;
+}
+.wa-float:hover{transform:scale(1.06);}
+.wa-float svg{width:28px; height:28px; color:#fff;}
+
+/* ===== ACESSIBILIDADE / SAC ===== */
+.a11y-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:22px;}
+.a11y-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:20px;
+  padding:30px 28px;
+}
+.a11y-card h3{font-size:17px; font-weight:700; margin-bottom:12px; display:flex; align-items:center; gap:10px; color:var(--ink);}
+.a11y-card h3 svg{width:20px; height:20px; flex-shrink:0; color:var(--violet-2);}
+.a11y-card p{font-size:14.5px; color:var(--dim); line-height:1.65;}
+.a11y-card ul{list-style:none; margin-top:18px; display:flex; flex-direction:column; gap:14px;}
+.a11y-card ul li{font-size:14.5px; color:var(--dim); display:flex; gap:12px; align-items:flex-start; line-height:1.5;}
+.a11y-card ul li svg{width:18px; height:18px; flex-shrink:0; margin-top:2px; color:var(--good);}
+.a11y-card ul li b{color:var(--ink); display:block; font-size:14.5px; margin-bottom:2px;}
+.a11y-contact{margin-top:22px; display:flex; flex-direction:column; gap:12px;}
+.a11y-contact a{
+  display:flex; align-items:center; gap:12px; font-size:14.5px; font-weight:600; color:var(--ink);
+  background:var(--bg); border:1px solid var(--line); border-radius:12px; padding:14px 16px;
+  transition:border-color .15s ease;
+}
+.a11y-contact a:hover{border-color:var(--violet);}
+.a11y-contact a svg{width:18px; height:18px; color:var(--blue-2); flex-shrink:0;}
+.a11y-contact a span.small{display:block; font-size:12.5px; font-weight:500; color:var(--dim-2); margin-top:2px;}
+.a11y-hours{
+  font-size:13px; color:var(--dim-2); margin-top:18px; border-top:1px solid var(--line);
+  padding-top:16px; line-height:1.6;
+}
+
+@media (max-width:860px) {
+  .a11y-grid{grid-template-columns:1fr;}
+  nav.links{display:none;}
+  .nav-toggle{display:flex;}
+  .hero-top{grid-template-columns:1fr;}
+  .hero-banner{max-width:280px; margin:0 auto;}
+  .plans-grid{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .coverage-cols{grid-template-columns:1fr;}
+  .search-row{flex-direction:column;}
+  .search-row button{padding:14px;}
+  .result-card{flex-wrap:wrap;}
+  .result-cta{margin-left:0;}
+  .section-head.split{flex-direction:column; align-items:flex-start;}
+  .section-banner{width:160px;}
+}
+@media (max-width:600px) {
+  .form-row{grid-template-columns:1fr;}
+  .signup-box{padding:26px 20px;}
+  .why-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="bg-grid"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-bars"><span></span><span></span><span></span><span></span><div class="dot"></div></div>
+      Hype
+    </div>
+    <nav class="links">
+      <a href="#home">Cobertura</a>
+      <a href="#planos">Planos</a>
+      <a href="#por-que">Por que a Hype</a>
+      <a href="#cobertura-lista">Cidades atendidas</a>
+      <a href="#cadastro">Cadastre-se</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#acessibilidade">Acessibilidade e SAC</a>
+    </nav>
+    <a href="#planos" class="nav-cta">Assinar agora</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#home">Cobertura</a>
+    <a href="#planos">Planos</a>
+    <a href="#por-que">Por que a Hype</a>
+    <a href="#cobertura-lista">Cidades atendidas</a>
+    <a href="#cadastro">Cadastre-se</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="#acessibilidade">Acessibilidade e SAC</a>
+    <a href="#planos" class="nav-cta" style="text-align:center; margin-top:10px;">Assinar agora</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <span class="eyebrow">Fibra óptica Brasília e Entorno</span>
+        <h1>Internet rápida para <span class="grad-text">todo o DF</span><br>e região do Entorno.</h1>
+        <p class="sub">Digite sua cidade ou região administrativa para descobrir se a Hype já leva fibra até você e qual plano combina com sua casa.</p>
+      </div>
+      <svg class="hero-banner" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3654e0"/>
+            <stop offset="60%" stop-color="#8a2be2"/>
+            <stop offset="100%" stop-color="#a13ef0"/>
+          </linearGradient>
+          <radialGradient id="heroGlow" cx="50%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#8a2be2" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#8a2be2" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="240" cy="150" r="160" fill="url(#heroGlow)"/>
+        <circle cx="240" cy="180" r="70" fill="none" stroke="#14162e" stroke-opacity="0.08" stroke-width="1.5"/>
+        <circle cx="240" cy="180" r="110" fill="none" stroke="#14162e" stroke-opacity="0.06" stroke-width="1.5"/>
+        <circle cx="240" cy="180" r="150" fill="none" stroke="#14162e" stroke-opacity="0.04" stroke-width="1.5"/>
+        <circle cx="240" cy="180" r="10" fill="url(#heroGrad)"/>
+        <g>
+          <rect x="150" y="230" width="14" height="40" rx="6" fill="#3654e0"/>
+          <rect x="172" y="205" width="14" height="65" rx="6" fill="#2540c9"/>
+          <rect x="194" y="175" width="14" height="95" rx="6" fill="#6f32e0"/>
+          <rect x="216" y="140" width="14" height="130" rx="6" fill="#8a2be2"/>
+          <rect x="238" y="100" width="14" height="170" rx="6" fill="#9733eb"/>
+          <rect x="260" y="140" width="14" height="130" rx="6" fill="#a13ef0"/>
+          <rect x="282" y="175" width="14" height="95" rx="6" fill="#ad4bf3"/>
+          <rect x="304" y="205" width="14" height="65" rx="6" fill="#b857f6"/>
+          <rect x="326" y="230" width="14" height="40" rx="6" fill="#c364f8"/>
+        </g>
+        <circle cx="120" cy="120" r="4" fill="#2540c9"/>
+        <circle cx="365" cy="95" r="5" fill="#a13ef0"/>
+        <circle cx="390" cy="200" r="3.5" fill="#8a2be2"/>
+        <circle cx="95" cy="230" r="3.5" fill="#3654e0"/>
+      </svg>
+    </div>
+    
+    <div class="check-panel">
+      <label class="check-label" for="citySearch">Consultar disponibilidade</label>
+      <div class="search-row">
+        <input type="text" id="citySearch" placeholder="Ex: Taguatinga, Samambaia, Gama..." autocomplete="off" role="combobox" aria-expanded="false" aria-controls="suggestions" aria-autocomplete="list">
+        <button id="searchBtn" type="button">Consultar</button>
+        <div class="suggestions" id="suggestions" role="listbox"></div>
+      </div>
+      <div class="result-card" id="resultCard" role="status" aria-live="polite">
+        <div class="result-bars" id="resultBars">
+          <span style="height:20%"></span><span style="height:35%"></span><span style="height:55%"></span><span style="height:80%"></span>
+        </div>
+        <div class="result-text">
+          <b id="resultTitle"></b>
+          <span id="resultDesc"></span>
+        </div>
+        <a href="#planos" class="result-cta" id="resultCta">Ver planos</a>
+      </div>
+    </div>
+    
+    <div class="hero-strip">
+      <span><b>11</b> regiões atendidas no DF</span>
+      <span><b>100%</b> fibra óptica</span>
+      <span><b>24h</b> instalação em áreas atendidas</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="planos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Planos</span>
+      <h2>Conecte toda a sua casa com Internet Hype Fibra.</h2>
+      <p>Sem fidelidade escondida, sem letra miúda. Escolha a forma de pagamento e a velocidade ideal para sua casa.</p>
+    </div>
+    
+    <div class="plan-group">
+      <div class="plan-group-title">Exclusivo no Cartão de Crédito</div>
+      <div class="plans-grid">
+        <div class="plan-card featured">
+          <div class="plan-badge">Melhor oferta</div>
+          <div class="plan-signal">
+            <span style="height: 30%; background: var(--blue);"></span>
+            <span style="height: 55%; background: var(--blue-2);"></span>
+            <span style="height: 35%; background: var(--dim-2);"></span>
+            <span style="height: 20%; background: var(--dim-2);"></span>
+          </div>
+          <div class="payment-tag">Exclusivo no Cartão de Crédito</div>
+          <div class="plan-name">600 MEGA</div>
+          <div class="plan-price">Por <b>R$99,99</b>/mês</div>
+          <div class="plan-fine">Preço fixo por 12 meses</div>
+          <div class="plan-actions">
+            <a href="#cadastro" class="plan-btn">Contratar Online</a>
+            <a href="https://wa.me/5561995833050" target="_blank" rel="noopener" class="plan-btn-secondary">Contratar pelo WhatsApp</a>
+            <a href="#cadastro" class="plan-link-ghost">Mais detalhes</a>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-signal">
+            <span style="height: 40%; background: var(--blue);"></span>
+            <span style="height: 65%; background: var(--blue-2);"></span>
+            <span style="height: 45%; background: var(--dim-2);"></span>
+            <span style="height: 25%; background: var(--dim-2);"></span>
+          </div>
+          <div class="payment-tag">Exclusivo no Cartão de Crédito</div>
+          <div class="plan-name">800 MEGA</div>
+          <div class="plan-price">Por <b>R$109,99</b>/mês</div>
+          <div class="plan-fine">Preço fixo por 12 meses</div>
+          <div class="plan-actions">
+            <a href="#cadastro" class="plan-btn">Contratar Online</a>
+            <a href="https://wa.me/5561995833050" target="_blank" rel="noopener" class="plan-btn-secondary">Contratar pelo WhatsApp</a>
+            <a href="#cadastro" class="plan-link-ghost">Mais detalhes</a>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-signal">
+            <span style="height: 50%; background: var(--blue);"></span>
+            <span style="height: 75%; background: var(--violet);"></span>
+            <span style="height: 95%; background: var(--violet-2);"></span>
+            <span style="height: 100%; background: var(--violet-2);"></span>
+          </div>
+          <div class="payment-tag">Exclusivo no Cartão de Crédito</div>
+          <div class="plan-name">GIGA</div>
+          <div class="plan-price">Por <b>R$139,99</b>/mês</div>
+          <div class="plan-fine">Preço fixo por 12 meses</div>
+          <div class="plan-actions">
+            <a href="#cadastro" class="plan-btn">Contratar Online</a>
+            <a href="https://wa.me/5561995833050" target="_blank" rel="noopener" class="plan-btn-secondary">Contratar pelo WhatsApp</a>
+            <a href="#cadastro" class="plan-link-ghost">Mais detalhes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="plan-group">
+      <div class="plan-group-title">No Boleto Bancário</div>
+      <div class="plans-grid">
+        <div class="plan-card">
+          <div class="plan-signal">
+            <span style="height: 30%; background: var(--blue);"></span>
+            <span style="height: 55%; background: var(--blue-2);"></span>
+            <span style="height: 35%; background: var(--dim-2);"></span>
+            <span style="height: 20%; background: var(--dim-2);"></span>
+          </div>
+          <div class="payment-tag">No Boleto Bancário</div>
+          <div class="plan-name">600 MEGA</div>
+          <div class="plan-price">Por <b>R$109,99</b>/mês</div>
+          <div class="plan-fine">Preço fixo por 12 meses</div>
+          <div class="plan-actions">
+            <a href="#cadastro" class="plan-btn">Contratar Online</a>
+            <a href="https://wa.me/5561995833050" target="_blank" rel="noopener" class="plan-btn-secondary">Contratar pelo WhatsApp</a>
+            <a href="#cadastro" class="plan-link-ghost">Mais detalhes</a>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-signal">
+            <span style="height: 40%; background: var(--blue);"></span>
+            <span style="height: 65%; background: var(--blue-2);"></span>
+            <span style="height: 45%; background: var(--dim-2);"></span>
+            <span style="height: 25%; background: var(--dim-2);"></span>
+          </div>
+          <div class="payment-tag">No Boleto Bancário</div>
+          <div class="plan-name">800 MEGA</div>
+          <div class="plan-price">Por <b>R$119,99</b>/mês</div>
+          <div class="plan-fine">Preço fixo por 12 meses</div>
+          <div class="plan-actions">
+            <a href="#cadastro" class="plan-btn">Contratar Online</a>
+            <a href="https://wa.me/5561995833050" target="_blank" rel="noopener" class="plan-btn-secondary">Contratar pelo WhatsApp</a>
+            <a href="#cadastro" class="plan-link-ghost">Mais detalhes</a>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-signal">
+            <span style="height: 50%; background: var(--blue);"></span>
+            <span style="height: 75%; background: var(--violet);"></span>
+            <span style="height: 95%; background: var(--violet-2);"></span>
+            <span style="height: 100%; background: var(--violet-2);"></span>
+          </div>
+          <div class="payment-tag">No Boleto Bancário</div>
+          <div class="plan-name">GIGA</div>
+          <div class="plan-price">Por <b>R$149,99</b>/mês</div>
+          <div class="plan-fine">Preço fixo por 12 meses</div>
+          <div class="plan-actions">
+            <a href="#cadastro" class="plan-btn">Contratar Online</a>
+            <a href="https://wa.me/5561995833050" target="_blank" rel="noopener" class="plan-btn-secondary">Contratar pelo WhatsApp</a>
+            <a href="#cadastro" class="plan-link-ghost">Mais detalhes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="por-que">
+  <div class="wrap">
+    <div class="section-head split">
+      <div class="head-text">
+        <span class="eyebrow">Por que a Hype</span>
+        <h2>Rede própria, sinal que não cai no pico da noite.</h2>
+      </div>
+      <svg class="section-banner" viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="whyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3654e0"/>
+            <stop offset="100%" stop-color="#a13ef0"/>
+          </linearGradient>
+        </defs>
+        <line x1="110" y1="140" x2="110" y2="40" stroke="url(#whyGrad)" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="110" cy="30" r="9" fill="url(#whyGrad)"/>
+        <path d="M85 55 A 36 36 0 0 1 135 55" fill="none" stroke="#8a2be2" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round"/>
+        <path d="M70 68 A 55 55 0 0 1 150 68" fill="none" stroke="#2540c9" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round"/>
+        <rect x="95" y="140" width="30" height="10" rx="3" fill="#eef0f9" stroke="rgba(20,22,50,0.12)"/>
+        <rect x="30" y="118" width="10" height="22" rx="4" fill="#3654e0"/>
+        <rect x="46" y="105" width="10" height="35" rx="4" fill="#2540c9"/>
+        <rect x="164" y="112" width="10" height="28" rx="4" fill="#8a2be2"/>
+        <rect x="180" y="98" width="10" height="42" rx="4" fill="#a13ef0"/>
+      </svg>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">Rede</div>
+        <h3>Fibra ponta a ponta</h3>
+        <p>Sem trecho em rádio ou cabo metálico: a fibra chega até a tomada da sua casa.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">Suporte</div>
+        <h3>Gente de verdade</h3>
+        <p>Chat com resposta em minutos, sem árvore de menu interminável.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">Contrato</div>
+        <h3>Sem pegadinha</h3>
+        <p>O valor que você vê no plano é o valor que cai na fatura, todo mês.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">Instalação</div>
+        <h3>Rápida e agendada</h3>
+        <p>Você escolhe o horário, o técnico chega no horário combinado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cobertura-lista">
+  <div class="wrap">
+    <div class="section-head split">
+      <div class="head-text">
+        <span class="eyebrow">Mapa de cobertura</span>
+        <h2>Onde a Hype já chegou.</h2>
+        <p>No momento, atendemos estas regiões administrativas do DF. Fora dessa lista, ainda não temos rede instalada.</p>
+      </div>
+      <svg class="section-banner" viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="covGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#3654e0"/>
+            <stop offset="100%" stop-color="#a13ef0"/>
+          </linearGradient>
+        </defs>
+        <rect x="70" y="90" width="12" height="30" rx="5" fill="#3654e0"/>
+        <rect x="90" y="75" width="12" height="45" rx="5" fill="#2540c9"/>
+        <rect x="110" y="55" width="12" height="65" rx="5" fill="#8a2be2"/>
+        <rect x="130" y="70" width="12" height="50" rx="5" fill="#a13ef0"/>
+        <rect x="150" y="85" width="12" height="35" rx="5" fill="#a13ef0"/>
+        <path d="M60 130 Q 110 150 160 130" fill="none" stroke="url(#covGrad)" stroke-width="3" stroke-linecap="round" stroke-opacity="0.6"/>
+        <circle cx="116" cy="40" r="6" fill="#a13ef0"/>
+      </svg>
+    </div>
+    <div class="coverage-cols">
+      <div class="cov-block">
+        <h3><span class="cov-dot covered"></span>Atendidas agora</h3>
+        <div class="cov-chips" id="coveredList"></div>
+        <div class="coverage-note">Não encontrou sua região na busca ou na lista acima? Ainda não chegamos aí: deixe seu contato para ser avisado quando a fibra Hype chegar.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cadastro">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Cadastre-se</span>
+      <h2>Deixe seus dados e a gente entra em contato.</h2>
+      <p>Preencha o formulário abaixo se sua região ainda não tem cobertura, avisamos assim que a fibra chegar. Se já atendemos você, nosso time liga pra fechar o melhor plano.</p>
+    </div>
+    <div class="signup-box">
+      <form id="signupForm" novalidate>
+        <div class="form-row">
+          <div class="form-field full">
+            <label for="suName">Nome completo</label>
+            <input type="text" id="suName" name="nome" placeholder="Seu nome" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="suPhone">WhatsApp / Telefone</label>
+            <input type="tel" id="suPhone" name="telefone" placeholder="(61) 90000-0000" required autocomplete="tel" pattern="^\(?\d{2}\)?\s?9?\d{4}-?\d{4}$">
+          </div>
+          <div class="form-field">
+            <label for="suEmail">E-mail</label>
+            <input type="email" id="suEmail" name="email" placeholder="voce@email.com" required autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label for="suCity">Cidade / Região</label>
+            <select id="suCity" name="cidade" required></select>
+          </div>
+          <div class="form-field">
+            <label for="suAddress">Endereço (rua, quadra, nº)</label>
+            <input type="text" id="suAddress" name="endereco" placeholder="Ex: QNM 12 Conjunto A, casa 5" required autocomplete="street-address">
+          </div>
+        </div>
+        <button type="submit" class="signup-submit" id="suSubmit">Quero ser Hype</button>
+        <div class="form-feedback" id="suFeedback" role="status" aria-live="polite"></div>
+        <p class="form-privacy">Ao enviar, você concorda em ser contatado pela Hype Telecom por telefone, e-mail ou WhatsApp sobre disponibilidade e planos. Seus dados não são compartilhados com terceiros para fins de marketing.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>Perguntas que a gente mais recebe.</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Quanto tempo leva pra instalar?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Em áreas já atendidas, a instalação costuma acontecer em até 24h após a contratação, em horário agendado com você.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Tem fidelidade ou multa por cancelamento?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>O preço fixo por 12 meses é uma condição promocional, não uma fidelidade obrigatória. Consulte as regras específicas do plano com nosso time antes de contratar.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Minha região não aparece na lista. E agora?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Preencha o formulário de cadastro mesmo assim. A gente usa esses dados pra priorizar a expansão da rede e avisa você assim que a fibra chegar aí.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Posso mudar de plano depois de contratar?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Sim, você pode solicitar upgrade ou downgrade de velocidade pelo SAC a qualquer momento, sujeito à disponibilidade técnica na sua região.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/5561995833050" class="wa-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.99.583 3.844 1.588 5.401L2 22l4.735-1.559A9.953 9.953 0 0 0 12.001 22C17.524 22 22 17.523 22 12S17.524 2 12.001 2zm0 18.222a8.19 8.19 0 0 1-4.19-1.146l-.3-.179-3.107 1.024 1.037-3.03-.196-.312a8.19 8.19 0 0 1-1.253-4.38c0-4.532 3.687-8.219 8.222-8.219 4.531 0 8.218 3.687 8.218 8.219 0 4.532-3.687 8.223-8.218 8.223z"/></svg>
+</a>
+
+<section class="section" id="acessibilidade">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Acessibilidade e atendimento</span>
+      <h2>Um site pensado para todo mundo.</h2>
+      <p>Trabalhamos para que este site seja utilizável por qualquer pessoa, independentemente de suas capacidades. Se algo não funcionar bem para você, fale com a gente pelo SAC.</p>
+    </div>
+    <div class="a11y-grid">
+      <div class="a11y-card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="4" r="2"/><path d="M19 8l-6 2 -1 2 2 9M5 8l6 2M9 12l-3 9"/><path d="M9 12h6"/></svg>
+          Compromisso de acessibilidade
+        </h3>
+        <p>Buscamos seguir as diretrizes do WCAG e do eMAG (Modelo de Acessibilidade em Governo Eletrônico) neste site, incluindo:</p>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><b>Navegação por teclado</b>Todos os links e botões podem ser acessados sem uso do mouse, usando Tab e Enter.</div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><b>Contraste de cores</b>Textos e botões seguem contraste adequado para leitura confortável.</div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><b>Compatibilidade com leitores de tela</b>Estrutura de páginas com marcação semântica para leitores como NVDA e VoiceOver.</div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><b>Layout responsivo</b>O site se adapta a diferentes tamanhos de tela e níveis de zoom.</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="a11y-card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          SAC — Serviço de Atendimento ao Cliente
+        </h3>
+        <p>Encontrou alguma barreira de acessibilidade no site ou precisa de ajuda para contratar, usar ou cancelar seu plano? Fale com a gente:</p>
+        <div class="a11y-contact">
+          <a href="tel:08007070000">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>0800 707 0000<span class="small">Ligação gratuita, todos os dias</span></span>
+          </a>
+          <a href="mailto:sac@hypetelecom.com.br">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+            <span>sac@hypetelecom.com.br<span class="small">Resposta em até 2 dias úteis</span></span>
+          </a>
+          <a href="https://wa.me/5561995833050" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>Chat pelo WhatsApp (61) 99583-3050<span class="small">Atendimento humano em minutos</span></span>
+          </a>
+        </div>
+        <div class="a11y-hours">Atendimento telefônico e chat: todos os dias, das 8h às 22h (horário de Brasília). Ouvidoria para reclamações não resolvidas pelo SAC também disponível pelos mesmos canais.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="wrap">
+    <svg class="cta-banner" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ctaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#3654e0"/>
+          <stop offset="60%" stop-color="#8a2be2"/>
+          <stop offset="100%" stop-color="#a13ef0"/>
+        </linearGradient>
+      </defs>
+      <circle cx="80" cy="80" r="76" fill="none" stroke="rgba(20,22,50,0.08)" stroke-width="1.5"/>
+      <circle cx="80" cy="80" r="54" fill="none" stroke="rgba(20,22,50,0.10)" stroke-width="1.5"/>
+      <g>
+        <rect x="46" y="88" width="11" height="32" rx="5" fill="#3654e0"/>
+        <rect x="63" y="70" width="11" height="50" rx="5" fill="#2540c9"/>
+        <rect x="80" y="48" width="11" height="72" rx="5" fill="#8a2be2"/>
+        <rect x="97" y="70" width="11" height="50" rx="5" fill="#a13ef0"/>
+        <rect x="114" y="88" width="11" height="32" rx="5" fill="#a13ef0"/>
+      </g>
+      <circle cx="80" cy="38" r="6" fill="url(#ctaGrad)"/>
+    </svg>
+    <h2>Sua região já pode ter fibra Hype.</h2>
+    <p>Faça a consulta gratuita e receba o plano ideal para sua casa em segundos.</p>
+    <a href="#home" class="cta-btn">Consultar minha cidade</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="logo">
+      <div class="logo-bars"><span></span><span></span><span></span><span></span><div class="dot"></div></div>
+      Hype
+    </div>
+    <div class="footer-links">
+      <a href="#planos">Planos</a>
+      <a href="#por-que">Sobre</a>
+      <a href="#cobertura-lista">Cobertura</a>
+      <a href="#cadastro">Cadastre-se</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#acessibilidade">Acessibilidade e SAC</a>
+    </div>
+    <div class="footer-copy">© 2026 Hype Telecom · Brasília, DF</div>
+  </div>
+</footer>
+
+<script>
+// ===== Cidades atendidas =====
+const cities = [
+  {name:"Candangolândia", region:"DF", covered:true},
+  {name:"Ceilândia", region:"DF", covered:true},
+  {name:"Gama", region:"DF", covered:true},
+  {name:"Guará I", region:"DF", covered:true},
+  {name:"Guará II", region:"DF", covered:true},
+  {name:"Recanto das Emas", region:"DF", covered:true},
+  {name:"Riacho Fundo I", region:"DF", covered:true},
+  {name:"Riacho Fundo II", region:"DF", covered:true},
+  {name:"Samambaia", region:"DF", covered:true},
+  {name:"Santa Maria", region:"DF", covered:true},
+  {name:"Taguatinga", region:"DF", covered:true}
+];
+
+const input = document.getElementById('citySearch');
+const suggestionsBox = document.getElementById('suggestions');
+const resultCard = document.getElementById('resultCard');
+const resultTitle = document.getElementById('resultTitle');
+const resultDesc = document.getElementById('resultDesc');
+const resultCta = document.getElementById('resultCta');
+const resultBars = document.getElementById('resultBars');
+const searchBtn = document.getElementById('searchBtn');
+
+function renderSuggestions(query){
+  const q = query.trim().toLowerCase();
+  if(!q){
+    suggestionsBox.classList.remove('open');
+    input.setAttribute('aria-expanded','false');
+    suggestionsBox.innerHTML = '';
+    return;
+  }
+  const matches = cities.filter(c => c.name.toLowerCase().includes(q)).slice(0,8);
+  if(matches.length === 0){
+    suggestionsBox.classList.remove('open');
+    input.setAttribute('aria-expanded', 'false');
+    suggestionsBox.innerHTML = '';
+    return;
+  }
+  input.setAttribute('aria-expanded', 'true');
+  suggestionsBox.innerHTML = matches.map(c => `
+    <div class="suggestion-item" data-city="${c.name}">
+      <span>${c.name}</span>
+      <span style="color:var(--dim-2); font-size:12px;">${c.region}</span>
+    </div>
+  `).join('');
+  suggestionsBox.classList.add('open');
+  suggestionsBox.querySelectorAll('.suggestion-item').forEach(el => {
+    el.addEventListener('click', () => {
+      input.value = el.dataset.city;
+      suggestionsBox.classList.remove('open');
+      showResult(el.dataset.city);
+    });
+  });
+}
+
+function showResult(cityName){
+  const city = cities.find(c => c.name.toLowerCase() === cityName.trim().toLowerCase());
+  resultCard.classList.remove('covered', 'pending');
+  const bars = resultBars.querySelectorAll('span');
+  if(!city){
+    resultCard.classList.add('show','pending');
+    resultTitle.textContent = "Ainda não disponível nessa região";
+    resultDesc.textContent = 'Hoje atendemos apenas as regiões listadas em "Cidades atendidas". Deixe seu contato para ser avisado quando a fibra chegar aí.';
+    resultCta.textContent = "Ver cidades atendidas";
+    resultCta.href = "#cobertura-lista";
+    resultCta.classList.add('ghost');
+    bars.forEach((b,i) => { b.style.height = ['15%','15%','15%','15%'][i]; b.style.background = 'var(--dim-2)'; });
+    return;
+  }
+  resultCard.classList.add('show', 'covered');
+  resultCta.classList.remove('ghost');
+  resultTitle.textContent = `Fibra Hype disponível em ${city.name}`;
+  resultDesc.textContent = "Sinal forte e instalação rápida. Escolha o plano ideal para sua casa.";
+  resultCta.textContent = "Ver planos";
+  resultCta.href = "#planos";
+  bars.forEach((b,i) => {
+    b.style.height = ['30%','55%','80%','100%'][i];
+    b.style.background = ['var(--blue)', 'var(--blue-2)', 'var(--violet)', 'var(--violet-2)'][i];
+  });
+}
+
+input.addEventListener('input', (e) => renderSuggestions(e.target.value));
+input.addEventListener('keydown', (e) => {
+  if(e.key === 'Enter') {
+    suggestionsBox.classList.remove('open');
+    showResult(input.value);
+  }
+});
+searchBtn.addEventListener('click', () => {
+  suggestionsBox.classList.remove('open');
+  showResult(input.value);
+});
+document.addEventListener('click', (e) => {
+  if(!e.target.closest('.search-row')) suggestionsBox.classList.remove('open');
+});
+
+// Preencher lista de cobertura
+const coveredList = document.getElementById('coveredList');
+cities.forEach(c => {
+  const chip = document.createElement('span');
+  chip.className = 'cov-chip covered';
+  chip.textContent = c.name;
+  coveredList.appendChild(chip);
+});
+
+// ===== Menu mobile =====
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+navToggle.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  navToggle.classList.toggle('open', isOpen);
+  navToggle.setAttribute('aria-expanded', isOpen);
+  navToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+});
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// ===== FAQ accordion =====
+document.querySelectorAll('.faq-item').forEach(item => {
+  const btn = item.querySelector('.faq-q');
+  const answer = item.querySelector('.faq-a');
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(other => {
+      if(other !== item) {
+        other.classList.remove('open');
+        other.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      }
+    });
+    item.classList.toggle('open', !isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    answer.style.maxHeight = !isOpen ? answer.scrollHeight + 'px' : null;
+  });
+});
+
+// ===== Formulário de cadastro =====
+const SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbx6fCR5PpU8Sxryz1jik6SkvTMsTaQuiplg6HFYom_PT3f7K5V4ouIvRnrLIQ2BYZxk9A/exec";
+const suCitySelect = document.getElementById('suCity');
+suCitySelect.innerHTML = '<option value="">Selecione sua cidade</option>' +
+  cities.map(c => `<option value="${c.name}">${c.name}</option>`).join('') +
+  '<option value="Outra">Outra região (não listada)</option>';
+
+const signupForm = document.getElementById('signupForm');
+const suSubmit = document.getElementById('suSubmit');
+const suFeedback = document.getElementById('suFeedback');
+
+signupForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  suFeedback.className = 'form-feedback';
+  if(!signupForm.checkValidity()) {
+    signupForm.reportValidity();
+    return;
+  }
+  const data = Object.fromEntries(new FormData(signupForm).entries());
+  data.data = new Date().toISOString();
+
+  if (!SHEETS_WEBHOOK_URL){
+    console.warn('SHEETS_WEBHOOK_URL não configurada. Dados capturados:', data);
+    suFeedback.textContent = 'Atenção: O sistema de envio (webhook) ainda não foi configurado. Por favor, fale conosco pelo WhatsApp!';
+    suFeedback.classList.add('show','err');
+    return;
+  }
+
+  suSubmit.disabled = true;
+  suSubmit.textContent = 'Enviando...';
+  try{
+    await fetch(SHEETS_WEBHOOK_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type':'text/plain;charset=utf-8'},
+      body: JSON.stringify(data)
+    });
+    suFeedback.textContent = 'Cadastro enviado! Nosso time entra em contato em breve.';
+    suFeedback.classList.add('show','ok');
+    signupForm.reset();
+  }catch(err){
+    console.error(err);
+    suFeedback.textContent = 'Não conseguimos enviar agora. Tente novamente ou fale pelo WhatsApp.';
+    suFeedback.classList.add('show','err');
+  }finally{
+    suSubmit.disabled = false;
+    suSubmit.textContent = 'Quero ser Hype';
+  }
+});
+</script>
+</body>
+</html>
